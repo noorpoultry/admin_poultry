@@ -1,0 +1,85 @@
+<div class="main-content">
+    <div class="container-fluid" *ngIf="dealDetails">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-danger">
+                    <h3 class="card-title ">Account List</h3>
+                </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                    Avg Weigth
+                                  </th>
+                                  <th>
+                                    QTY
+                                  </th>
+                                  <th>
+                                    Amount
+                                  </th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>{{dealDetails.listDetails.avgWeight}}kg</td>
+                                    <td>{{dealDetails.quantity}}</td>
+                                    <td>{{dealDetails.offerPrice}}</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-profile">
+              <div class="card-avatar">
+                  <a href="javascript:void(0)">
+                      <img class="img" src="./assets/img/faces/avtar.jpg" />
+                  </a>
+              </div>
+              <div class="card-body">
+                  <h3 class="card-title">Seller</h3>
+                     <h4><strong>Name: </strong><span>{{dealDetails.sellerDetails.name}}</span></h4>
+                    <h4><strong>Email: </strong><span>{{dealDetails.sellerDetails.email}}</span></h4>
+                    <h4><strong>Phone No: </strong><span>{{dealDetails.sellerDetails.phoneNumber}}</span></h4>
+                    <h4><strong>Work: </strong><span>{{dealDetails.sellerDetails.userType}}</span></h4>
+                    <h4><strong>Company: </strong><span>{{dealDetails.sellerDetails.company}}</span></h4>
+                    <h4><strong>Address: </strong><span>{{dealDetails.sellerDetails.street}}</span></h4>
+                    <h4><strong>Distric: </strong><span>{{dealDetails.sellerDetails.district}}</span></h4>
+                    <h4><strong>State: </strong><span>{{dealDetails.sellerDetails.state}}</span></h4>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="javascript:void(0)">
+                        <img class="img" src="./assets/img/faces/avtar.jpg" />
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Buyer</h3>
+                    <h4><strong>Name: </strong><span>{{dealDetails.buyerDetails.name}}</span></h4>
+                    <h4><strong>Email: </strong><span>{{dealDetails.buyerDetails.email}}</span></h4>
+                    <h4><strong>Phone No: </strong><span>{{dealDetails.buyerDetails.phoneNumber}}</span></h4>
+                    <h4><strong>Work: </strong><span>{{dealDetails.buyerDetails.userType}}</span></h4>
+                    <h4><strong>Company: </strong><span>{{dealDetails.buyerDetails.company}}</span></h4>
+                    <h4><strong>Address: </strong><span>{{dealDetails.buyerDetails.street}}</span></h4>
+                    <h4><strong>Distric: </strong><span>{{dealDetails.buyerDetails.district}}</span></h4>
+                    <h4><strong>State: </strong><span>{{dealDetails.buyerDetails.state}}</span></h4>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="btn" (click)="updateDeal()">Deal Done</button>
+            </div>
+        </div>
+    </div>
+  </div>
+ 
